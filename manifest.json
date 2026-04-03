@@ -1,0 +1,12 @@
+{
+  "name": "Battle of the Quran — معركة المصحف",
+  "short_name": "معركة المصحف",
+  "description": "Interactive trilingual app based on Sheikh Mohammed al-Ghazali's book on Quran preservation",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4E342E",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": []
+}
