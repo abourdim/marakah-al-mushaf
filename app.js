@@ -223,7 +223,12 @@ const TIMELINE = [
   {year:'1492',emoji:'🏰',ar:{title:'سقوط الأندلس',desc:'محاكم التفتيش تحرق المصاحف في إسبانيا'},en:{title:'Fall of Andalusia',desc:'The Inquisition burns Qurans in Spain'},fr:{title:'Chute de l\'Andalousie',desc:'L\'Inquisition brule les Corans en Espagne'}},
   {year:'1800',emoji:'🔬',ar:{title:'عصر الاستشراق',desc:'بداية الدراسات الاستشراقية المشككة في القرآن'},en:{title:'Age of Orientalism',desc:'Beginning of orientalist studies questioning the Quran'},fr:{title:'Ere de l\'Orientalisme',desc:'Debut des etudes orientalistes remettant en question le Coran'}},
   {year:'1972',emoji:'🏛️',ar:{title:'اكتشاف مخطوطات صنعاء',desc:'اكتشاف مخطوطات قرآنية قديمة تؤكد حفظ النص'},en:{title:'Discovery of Sanaa Manuscripts',desc:'Discovery of ancient Quran manuscripts confirming text preservation'},fr:{title:'Decouverte des Manuscrits de Sanaa',desc:'Decouverte d\'anciens manuscrits coraniques confirmant la preservation'}},
-  {year:'2015',emoji:'📱',ar:{title:'العصر الرقمي',desc:'ملايين التطبيقات والمواقع تنشر القرآن في كل مكان'},en:{title:'Digital Age',desc:'Millions of apps and websites spreading the Quran everywhere'},fr:{title:'Ere Numerique',desc:'Des millions d\'applications et de sites diffusent le Coran partout'}}
+  {year:'2015',emoji:'📱',ar:{title:'العصر الرقمي',desc:'ملايين التطبيقات والمواقع تنشر القرآن في كل مكان'},en:{title:'Digital Age',desc:'Millions of apps and websites spreading the Quran everywhere'},fr:{title:'Ere Numerique',desc:'Des millions d\'applications et de sites diffusent le Coran partout'}},
+  {year:'634',emoji:'🗡️',ar:{title:'الفتوحات الإسلامية',desc:'انتشار القرآن مع انتشار الإسلام في الشام والعراق ومصر'},en:{title:'Islamic Conquests',desc:'The Quran spread with Islam to Syria, Iraq and Egypt'},fr:{title:'Conquetes Islamiques',desc:'Le Coran s\'est repandu avec l\'Islam en Syrie, Irak et Egypte'}},
+  {year:'700',emoji:'✍️',ar:{title:'تطوير الخط العربي',desc:'ابتكار النقاط والتشكيل لتسهيل قراءة القرآن لغير العرب'},en:{title:'Arabic Script Development',desc:'Dots and vowel marks invented to help non-Arabs read the Quran'},fr:{title:'Developpement de l\'Ecriture',desc:'Points et signes diacritiques inventes pour aider les non-Arabes a lire le Coran'}},
+  {year:'1924',emoji:'🏛️',ar:{title:'المصحف الأميري',desc:'طبع المصحف المصري الذي أصبح المرجع المعتمد عالمياً'},en:{title:'The Cairo Standard Edition',desc:'The Egyptian Quran print that became the global standard reference'},fr:{title:'L\'Edition Standard du Caire',desc:'L\'impression egyptienne du Coran devenue la reference mondiale'}},
+  {year:'2015',emoji:'🏛️',ar:{title:'اكتشاف مخطوطة برمنغهام',desc:'مخطوطة قرآنية تعود لعهد الرسول ﷺ تؤكد حفظ النص'},en:{title:'Birmingham Manuscript',desc:'A Quran manuscript from the Prophet\'s era confirming text preservation'},fr:{title:'Manuscrit de Birmingham',desc:'Un manuscrit coranique de l\'epoque du Prophete confirmant la preservation'}},
+  {year:'2023',emoji:'🌐',ar:{title:'الذكاء الاصطناعي والقرآن',desc:'استخدام التقنية الحديثة في تحليل ودراسة المخطوطات القرآنية'},en:{title:'AI and the Quran',desc:'Using modern technology to analyze and study Quran manuscripts'},fr:{title:'IA et le Coran',desc:'Utilisation de la technologie moderne pour analyser les manuscrits coraniques'}}
 ];
 
 // ═══════════════ QUIZ DATA ═══════════════
@@ -235,7 +240,14 @@ const QUIZ = [
   {ar:'هل شاركت معرفتك عن القرآن مع غير مسلم؟',en:'Have you shared your knowledge about the Quran with a non-Muslim?',fr:'Avez-vous partage vos connaissances sur le Coran avec un non-musulman ?'},
   {ar:'هل تحفظ من القرآن ما يكفي للدفاع عنه؟',en:'Do you memorize enough Quran to defend it?',fr:'Memorisez-vous assez de Coran pour le defendre ?'},
   {ar:'هل تعلّم أطفالك أو إخوتك حب القرآن؟',en:'Do you teach your children or siblings to love the Quran?',fr:'Enseignez-vous a vos enfants ou freres l\'amour du Coran ?'},
-  {ar:'هل تعرف عن المخطوطات القرآنية القديمة؟',en:'Do you know about ancient Quranic manuscripts?',fr:'Connaissez-vous les anciens manuscrits coraniques ?'}
+  {ar:'هل تعرف عن المخطوطات القرآنية القديمة؟',en:'Do you know about ancient Quranic manuscripts?',fr:'Connaissez-vous les anciens manuscrits coraniques ?'},
+  {ar:'هل تستخدم التقنية الحديثة في دراسة القرآن؟',en:'Do you use modern technology to study the Quran?',fr:'Utilisez-vous la technologie moderne pour etudier le Coran ?'},
+  {ar:'هل تعرف كيف يختلف حفظ القرآن عن حفظ الكتب الأخرى؟',en:'Do you know how Quran preservation differs from other scriptures?',fr:'Savez-vous comment la preservation du Coran differe des autres ecritures ?'},
+  {ar:'هل سمعت عن اكتشاف مخطوطة برمنغهام؟',en:'Have you heard about the Birmingham manuscript discovery?',fr:'Avez-vous entendu parler de la decouverte du manuscrit de Birmingham ?'},
+  {ar:'هل تعرف معنى التحدي القرآني للبشرية؟',en:'Do you know the meaning of the Quranic challenge to humanity?',fr:'Connaissez-vous le sens du defi coranique a l\'humanite ?'},
+  {ar:'هل تؤمن بأن حفظ القرآن معجزة مستمرة؟',en:'Do you believe Quran preservation is an ongoing miracle?',fr:'Croyez-vous que la preservation du Coran est un miracle continu ?'},
+  {ar:'هل تعرف عدد حفاظ القرآن في العالم اليوم؟',en:'Do you know how many Quran memorizers exist worldwide today?',fr:'Savez-vous combien de memorisateurs du Coran existent dans le monde ?'},
+  {ar:'هل تدافع عن القرآن عندما تسمع شبهة حوله؟',en:'Do you defend the Quran when you hear a doubt about it?',fr:'Defendez-vous le Coran quand vous entendez un doute a son sujet ?'}
 ];
 
 // ═══════════════ DUAS DATA ═══════════════
