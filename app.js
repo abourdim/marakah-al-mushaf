@@ -536,7 +536,6 @@ function renderCards() {
   const t = T[lang];
   const readCards = getReadCards();
   const container = document.getElementById('cardsContainer');
-  if (!container) return;
   // Search bar
   const searchHTML = `<div class="search-bar"><span class="search-icon">🔍</span><input class="search-input" id="cardsSearch" placeholder="${t.searchPlaceholder}" oninput="filterCards(this.value)"></div>`;
   container.innerHTML = searchHTML + CARDS.map(c => {
@@ -603,9 +602,7 @@ function renderQuiz() {
 function showQuizQuestion() {
   const t = T[lang];
   const container = document.getElementById('quizContainer');
-  if (!container) return;
   const result = document.getElementById('quizResult');
-  if (!result) return;
   result.classList.add('hidden');
   if (quizState.current >= QUIZ.length) {
     showQuizResult();
@@ -642,7 +639,6 @@ function answerQuiz(idx) {
     if (i === idx && i !== correct) o.classList.add('wrong');
   });
   const feedback = document.getElementById('quizFeedback');
-  if (!feedback) return;
   feedback.classList.remove('hidden');
   if (idx === correct) {
     quizState.score++;
@@ -675,7 +671,6 @@ function useHint() {
   quizState.lifelines.hint = false;
   const q = QUIZ[quizState.current][lang];
   const feedback = document.getElementById('quizFeedback');
-  if (!feedback) return;
   feedback.classList.remove('hidden');
   feedback.innerHTML = `<span class="fb-hint">💡 ${q.hint}</span>`;
   playSound('click');
@@ -686,7 +681,6 @@ function useQuranRef() {
   quizState.lifelines.quran = false;
   const q = QUIZ[quizState.current][lang];
   const feedback = document.getElementById('quizFeedback');
-  if (!feedback) return;
   feedback.classList.remove('hidden');
   feedback.innerHTML = `<span class="fb-quran">📖 ${q.quran}</span>`;
   playSound('click');
@@ -706,7 +700,6 @@ function showQuizResult() {
   else { emoji = '🌱'; title = lang==='ar'?'واصل التعلم!':lang==='fr'?'Continue d\'apprendre !':'Keep Learning!'; }
   (document.getElementById('quizContainer')||{}).innerHTML= '';
   const result = document.getElementById('quizResult');
-  if (!result) return;
   result.classList.remove('hidden');
   result.innerHTML = `
     <div class="qr-emoji">${emoji}</div>
@@ -761,7 +754,6 @@ function renderProgress() {
 function updateXPDisplay() {
   // Quick update if progress panel is visible
   const panel = document.getElementById('panel-progress');
-  if (!panel) return;
   if (panel && panel.classList.contains('active')) renderProgress();
 }
 
@@ -889,7 +881,6 @@ function renderTicker() {
   const items = tips[lang];
   const doubled = [...items, ...items];
   const ticker = document.getElementById('tickerText');
-  if (!ticker) return;
   ticker.innerHTML = doubled.map(t => `<span class="tc">&nbsp;&nbsp;${t}&nbsp;&nbsp;•</span>`).join('');
   ticker.style.animation = `tickerMarquee ${items.length * 6}s linear infinite`;
 }
@@ -898,7 +889,6 @@ function renderTicker() {
 let splashTimer;
 function initSplash() {
   const features = document.getElementById('splashFeatures');
-  if (!features) return;
   if (features) {
     features.innerHTML = T[lang].splashFeatures.map((f, i) =>
       `<div class="splash-feature" style="animation-delay:${0.3+i*0.3}s">${f}</div>`
@@ -906,7 +896,6 @@ function initSplash() {
   }
   let count = 5;
   const counter = document.getElementById('splashCount');
-  if (!counter) return;
   splashTimer = setInterval(() => {
     count--;
     if (counter) counter.textContent = count;
@@ -916,7 +905,6 @@ function initSplash() {
 function dismissSplash() {
   clearInterval(splashTimer);
   const splash = document.getElementById('splash');
-  if (!splash) return;
   if (splash) { splash.classList.add('hidden'); setTimeout(() => splash.remove(), 600); }
 }
 
@@ -970,16 +958,13 @@ function initKeyboardNav() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       const hp = document.getElementById('helpPanel');
-      if (!hp) return;
       if (!hp.classList.contains('hidden')) { toggleHelp(); return; }
       const dp = document.getElementById('duaPanel');
-      if (!dp) return;
       if (!dp.classList.contains('hidden')) { toggleDuaPanel(); return; }
       document.querySelectorAll('.trait-card.open').forEach(c => c.classList.remove('open'));
     }
     if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
       const panel = document.getElementById('panel-cards');
-      if (!panel) return;
       if (!panel || !panel.classList.contains('active')) return;
       if (document.activeElement && document.activeElement.id === 'cardsSearch') return;
       e.preventDefault();
@@ -1004,14 +989,11 @@ function toggleHelp() { document.getElementById('helpPanel').classList.toggle('h
 function toggleDuaPanel() { document.getElementById('duaPanel').classList.toggle('hidden'); playSound('click'); }
 function showToast(msg) {
   const t = document.getElementById('toast');
-  if (!t) return;
   const m = document.getElementById('toastMsg');
-  if (!m) return;
   if (t && m) { m.textContent = msg; t.style.display = 'block'; setTimeout(() => t.style.display = 'none', 2500); }
 }
 function initScrollTop() {
   const btn = document.getElementById('scrollTop');
-  if (!btn) return;
   window.addEventListener('scroll', () => { if (btn) btn.classList.toggle('visible', window.scrollY > 300); });
 }
 
@@ -1035,7 +1017,6 @@ function playSound(type) {
 // ═══════════════ CONFETTI ═══════════════
 function launchConfetti() {
   const canvas = document.getElementById('confettiCanvas');
-  if (!canvas) return;
   canvas.style.display = 'block';
   const ctx = canvas.getContext('2d');
   canvas.width = window.innerWidth; canvas.height = window.innerHeight;
