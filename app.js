@@ -536,6 +536,7 @@ function renderCards() {
   const t = T[lang];
   const readCards = getReadCards();
   const container = document.getElementById('cardsContainer');
+  if (!container) return;
   // Search bar
   const searchHTML = `<div class="search-bar"><span class="search-icon">🔍</span><input class="search-input" id="cardsSearch" placeholder="${t.searchPlaceholder}" oninput="filterCards(this.value)"></div>`;
   container.innerHTML = searchHTML + CARDS.map(c => {
@@ -602,6 +603,7 @@ function renderQuiz() {
 function showQuizQuestion() {
   const t = T[lang];
   const container = document.getElementById('quizContainer');
+  if (!container) return;
   const result = document.getElementById('quizResult');
   result.classList.add('hidden');
   if (quizState.current >= QUIZ.length) {
